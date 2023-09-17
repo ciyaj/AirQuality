@@ -28,7 +28,6 @@ class LocationSearchViewModel: ObservableObject {
                 let newLocations = try await locationService.searchLocation(latitude: latitude, longitude: longitude)
                 state = .success(locations: newLocations)
             } catch {
-                print("dummy", latitude, longitude)
                 state = .error(message: error.localizedDescription)
                 print(state)
             }

@@ -16,12 +16,6 @@ struct LocationSearchService {
         print("searchLocation called")
         
         let urlString = URLComponents(string: "https://api.airvisual.com/v2/nearest_city?lat=\(latitude)&lon=\(longitude)&key=80d870b3-aeca-47fc-a6c8-b1ba5aaa7b95")
-        
-//        var queryItems = [
-//            URLQueryItem(name: "latitude", value: "\(latitude)"),
-//            URLQueryItem(name: "longitude", value: "\(longitude)")
-//        ]
-//
         guard let url = urlString?.url else {
             fatalError("Invalid URL") }
         

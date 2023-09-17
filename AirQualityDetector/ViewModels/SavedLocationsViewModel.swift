@@ -9,8 +9,6 @@ import SwiftUI
 
 @MainActor
 class SavedLocationsViewModel: ObservableObject {
-//    #warning("delete the service")
-//    private let service = RecipeSearchService()
     let defaults = UserDefaults.standard
     @Published var savedLocations: [LocationQuality] {
         didSet {
