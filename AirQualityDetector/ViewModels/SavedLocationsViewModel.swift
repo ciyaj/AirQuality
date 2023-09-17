@@ -29,15 +29,13 @@ class SavedLocationsViewModel: ObservableObject {
                 print(savedLocations)
                 } catch {
                     print("Error decoding savedLocations: \(error)")
-                    self.savedLocations = [] // Initialize the array here if there's an error
+                    self.savedLocations = []
                 }
             } else {
-                self.savedLocations = [] // Initialize the array here if there's no data in UserDefaults
+                self.savedLocations = []
                 print("no save")
             }
     }
-
-    private let saveKey = "Bookmarked"
 
     func containsLocation(_ location: LocationQuality) -> Bool {
         return savedLocations.contains {
